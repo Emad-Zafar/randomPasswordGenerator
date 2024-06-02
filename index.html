@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Random Password Generator</h1>
+      <div class="generator">
+        <div class="field">
+          <input type="text" disabled id="outputField" />
+          <button onclick="generatePassword()">Generate</button>
+          <div class="copy_section">
+            <button onclick="copyValue()">Copy</button>
+            <div id="copiedButton">Copied!</div>
+          </div>
+        </div>
+
+        <div class="range">
+          <div>
+            Length:
+            <span id="length">0</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="30"
+            value="0"
+            onchange="calculateLength(event)"
+          />
+        </div>
+
+        <div class="options">
+          <div>
+            <input
+              type="checkbox"
+              id="capitalLetters"
+              name="capitalLetters"
+              value="capitalLetters"
+            />
+            <label for="capitalLetters">ABC</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="smallLetters"
+              name="smallLetters"
+              value="smallLetters"
+            />
+            <label for="smallLetters">abc</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="numbers"
+              name="numbers"
+              value="numbers"
+            />
+            <label for="numbers">123</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="specialCharacters"
+              name="specialCharacters"
+              value="specialCharacters"
+            />
+            <label for="specialCharacters">&$@</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
